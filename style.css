@@ -212,5 +212,15 @@ ul{ margin:.6em 0 .6em 1.1em }
     --bg:#ffffff; --panel:#f7f7f9; --ink:#0b0c10; --muted:#606977;
     --border:#e4e6eb; --shadow:0 10px 30px rgba(0,0,0,.08);
   }
+}/* ===== Force 10% side gutters on the main page content ===== */
+main.content {
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
+
+/* Keep it comfy on very small phones */
+@media (max-width: 480px){
+  main.content { padding-left: 6vw; padding-right: 6vw; }
+}
+
 */
