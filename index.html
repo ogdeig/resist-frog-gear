@@ -3,21 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Funny Frog & Dino Protest Tees + Inflatable Costumes – Amazon Gift Guide</title>
-  <meta name="description" content="Our 5 best picks: meme-heavy frog protest tees, a dino tee, and two hilarious inflatable costumes. Quick pros, who it’s for, and direct Amazon links." />
+  <meta name="description" content="Our 5 best picks: meme-heavy frog protest tees and two hilarious inflatable costumes. Quick pros, who it’s for, and direct Amazon links." />
   <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Funny Frog & Dino Protest Tees + Inflatable Costumes – Amazon Gift Guide" />
   <meta property="og:description" content="From satire shirts to full-body inflatable frog and T-Rex suits—here are the internet’s funniest picks in one place." />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="assets/hero.jpg" />
+  <meta property="og:image" content="assets/hero.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Funny Frog & Dino Protest Tees + Inflatable Costumes – Amazon Gift Guide" />
   <meta name="twitter:description" content="5 editor-vetted picks with quick pros and who it’s for. Click through for current price & delivery." />
-  <meta name="twitter:image" content="assets/hero.jpg" />
+  <meta name="twitter:image" content="assets/hero.png" />
+
+  <!-- Favicon (PNG) -->
   <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- Base styles -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Article Schema -->
+  <!-- Page-scoped tweaks for thumbnails & hero brand mark -->
+  <style>
+    :root { --brand-hot:#ff0050; --brand-cyan:#00f2ea; --text:#eaeaea; --card-bg:#121212; }
+    .hero { display:grid; grid-template-columns:1.1fr .9fr; gap:2rem; align-items:center; }
+    .hero .brand-mark { width:42px; height:42px; border-radius:10px; margin-right:.65rem; vertical-align:middle; }
+    .hero h1 { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+    .thumb-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:1rem; list-style:none; padding:0; margin:.75rem 0 0; }
+    .thumb-grid a { display:flex; flex-direction:column; align-items:center; text-decoration:none; background:var(--card-bg); border-radius:14px; padding:10px; box-shadow:0 6px 16px rgba(0,0,0,.15); transition:transform .12s ease; }
+    .thumb-grid a:hover { transform: translateY(-2px); }
+    .thumb-grid .thumb { display:block; width:160px; height:160px; border-radius:10px; object-fit:cover; background:#0e0e0e; }
+    .thumb-grid span { margin-top:.5rem; font-size:.9rem; text-align:center; color:var(--text); }
+    .badge { display:inline-block; padding:.25rem .5rem; border-radius:999px; background:linear-gradient(90deg, var(--brand-hot), var(--brand-cyan)); color:#000; font-weight:700; font-size:.8rem; }
+    .product-section { display:grid; grid-template-columns: 1fr 1.1fr; gap:1.5rem; align-items:center; }
+    .product-media img { width:100%; height:auto; border-radius:16px; }
+    .cta.primary { background:linear-gradient(90deg, var(--brand-hot), var(--brand-cyan)); color:#000; border:none; }
+    @media (max-width: 900px) {
+      .hero, .product-section { grid-template-columns:1fr; }
+    }
+  </style>
+
+  <!-- Structured data: Article -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -25,29 +52,30 @@
     "headline":"Funny Frog & Dino Protest Tees + Inflatable Costumes",
     "description":"Our 5 best picks: meme-heavy frog protest tees, a dino tee, and two hilarious inflatable costumes. Quick pros, who it’s for, and direct Amazon links.",
     "author":{"@type":"Person","name":"Gift Guide Editors"},
-    "publisher":{"@type":"Organization","name":"Gift Guide Collective","logo":{"@type":"ImageObject","url":"https://example.com/logo.png"}},
+    "publisher":{"@type":"Organization","name":"Gift Guide Collective","logo":{"@type":"ImageObject","url":"assets/favicon.png"}},
+    "image":"assets/hero.png",
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://example.com/frog-dino-funny-gifts/"},
     "datePublished":"2025-10-21",
     "dateModified":"2025-10-21"
   }
   </script>
 
-  <!-- ItemList gets filled by script.js -->
-  <script id="itemlist-jsonld" type="application/ld+json">{}</script>
-
-  <!-- FAQs -->
-  <script id="faq-jsonld" type="application/ld+json">
+  <!-- Structured data: ItemList of products -->
+  <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Are these Amazon links affiliate links?","acceptedAnswer":{"@type":"Answer","text":"Yes. As an Amazon Associate I earn from qualifying purchases at no extra cost to you."}},
-      {"@type":"Question","name":"Do you list prices?","acceptedAnswer":{"@type":"Answer","text":"Amazon prices and availability change often. Click through to see the current price and delivery window for your location."}},
-      {"@type":"Question","name":"Who operates this site?","acceptedAnswer":{"@type":"Answer","text":"This guide is independent and not affiliated with any other brand. All trademarks belong to their owners."}}
+    "@type":"ItemList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Frog Unicorn Raccoon Bear Dinosaur Protest T-Shirt","url":"https://amzn.to/3L6I1YS","image":"assets/product-1.png"},
+      {"@type":"ListItem","position":2,"name":"Portland Frog Protest Funny Political Satire Activism Tee T-Shirt","url":"https://amzn.to/4hmCrhb","image":"assets/product-2.png"},
+      {"@type":"ListItem","position":3,"name":"Resisting Frog Lover with Foot On Ice Cube Propaganda Poster T-Shirt","url":"https://amzn.to/4opVCsG","image":"assets/product-3.png"},
+      {"@type":"ListItem","position":4,"name":"Blow Up Frog Costume Adult Funny Inflatable Animal Costume","url":"https://amzn.to/4o1EiKH","image":"assets/product-4.png"},
+      {"@type":"ListItem","position":5,"name":"Inflatable Dinosaur Costume for Adult Halloween T-Rex","url":"https://amzn.to/48GHhUj","image":"assets/product-5.png"}
     ]
   }
   </script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="wrapper">
@@ -64,28 +92,64 @@
     <!-- HERO -->
     <section class="hero card">
       <div class="hero-copy">
-        <h1>Funny Frog &amp; Dino Protest Tees + Inflatable Costumes</h1>
+        <h1>
+          <img class="brand-mark" src="assets/favicon.png" alt="Site icon" width="42" height="42" />
+          Funny Frog &amp; Dino Protest Tees + Inflatable Costumes
+        </h1>
         <p class="lead">From tongue-in-cheek protest frogs to a glorious inflatable T-Rex, here are five internet-ready picks that spark laughs on command.</p>
         <p class="disclosure"><strong>Disclosure:</strong> This article contains affiliate links. <em>As an Amazon Associate I earn from qualifying purchases.</em> It doesn’t change the price you pay.</p>
-        <p class="note">Independent picks. Not affiliated with the brands or Amazon.</p>
+        <p class="note">Independent picks. All trademarks belong to their owners.</p>
         <a class="cta primary" href="#top-picks">Jump to Top Picks ↓</a>
       </div>
       <div class="hero-media">
-        <img src="assets/hero.jpg" alt="Funny frog and dinosaur tees and costumes – hero image" width="1200" height="630" />
+        <!-- Use your PNG hero -->
+        <img src="assets/hero.png" alt="Funny frog and dinosaur tees and costumes – hero image" width="1200" height="630" />
       </div>
     </section>
 
-    <!-- TOC -->
+    <!-- Thumbnail TOC (all PNGs) -->
     <section id="top-picks" class="toc card">
       <h2>Quick Navigation</h2>
-      <ol class="toc-list" id="toc-list"></ol>
+      <ul class="thumb-grid">
+        <li>
+          <a href="https://amzn.to/3L6I1YS" target="_blank" rel="nofollow sponsored noopener" title="Frog Unicorn Raccoon Bear Dinosaur Protest T-Shirt">
+            <img class="thumb" src="assets/product-1-thumb.png" width="160" height="160" alt="Frog Unicorn Raccoon Bear Dinosaur Protest Tee thumbnail" />
+            <span>Frog + Unicorn Tee</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://amzn.to/4hmCrhb" target="_blank" rel="nofollow sponsored noopener" title="Portland Frog Protest Funny Political Satire Activism Tee T-Shirt">
+            <img class="thumb" src="assets/product-2-thumb.png" width="160" height="160" alt="Portland Frog Protest Tee thumbnail" />
+            <span>Portland Frog Tee</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://amzn.to/4opVCsG" target="_blank" rel="nofollow sponsored noopener" title="Resisting Frog Lover with Foot On Ice Cube Propaganda Poster T-Shirt">
+            <img class="thumb" src="assets/product-3-thumb.png" width="160" height="160" alt="Resisting Frog Lover Propaganda Tee thumbnail" />
+            <span>Propaganda Frog Tee</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://amzn.to/4o1EiKH" target="_blank" rel="nofollow sponsored noopener" title="Blow Up Frog Costume Adult Funny Inflatable">
+            <img class="thumb" src="assets/product-4-thumb.png" width="160" height="160" alt="Blow Up Frog Costume thumbnail" />
+            <span>Inflatable Frog Costume</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://amzn.to/48GHhUj" target="_blank" rel="nofollow sponsored noopener" title="Inflatable Dinosaur Costume Adult T-Rex">
+            <img class="thumb" src="assets/product-5-thumb.png" width="160" height="160" alt="Inflatable T-Rex Costume thumbnail" />
+            <span>Inflatable T-Rex</span>
+          </a>
+        </li>
+      </ul>
+      <p class="note">Tap a thumbnail to see price and delivery on Amazon (affiliate links).</p>
     </section>
 
     <!-- PRODUCT 1 -->
-    <section class="product-section card" data-title="Frog Unicorn Raccoon Bear Dinosaur Protest T-Shirt">
+    <section class="product-section card" id="p1" data-title="Frog Unicorn Raccoon Bear Dinosaur Protest T-Shirt">
       <div class="product-media">
         <div class="badge">🐸 Meme Lover</div>
-        <img src="assets/product-1.jpg" alt="Frog Unicorn Raccoon Bear Dinosaur Protest T-Shirt" width="800" height="533" loading="lazy" />
+        <img src="assets/product-1.png" alt="Frog Unicorn Raccoon Bear Dinosaur Protest T-Shirt" loading="lazy" />
       </div>
       <div class="product-copy">
         <h3>Editor’s Pick #1: <span class="product-name">Frog Unicorn Raccoon Bear Dinosaur Protest T-Shirt</span></h3>
@@ -100,10 +164,10 @@
     </section>
 
     <!-- PRODUCT 2 -->
-    <section class="product-section card" data-title="Portland Frog Protest Funny Political Satire Activism Tee">
+    <section class="product-section card" id="p2" data-title="Portland Frog Protest Funny Political Satire Activism Tee T-Shirt">
       <div class="product-media">
         <div class="badge">🪧 Street Satire</div>
-        <img src="assets/product-2.jpg" alt="Portland Frog Protest Funny Political Satire Activism Tee" width="800" height="533" loading="lazy" />
+        <img src="assets/product-2.png" alt="Portland Frog Protest Funny Political Satire Activism Tee T-Shirt" loading="lazy" />
       </div>
       <div class="product-copy">
         <h3>Editor’s Pick #2: <span class="product-name">Portland Frog Protest Funny Political Satire Activism Tee</span></h3>
@@ -118,13 +182,13 @@
     </section>
 
     <!-- PRODUCT 3 -->
-    <section class="product-section card" data-title="Resisting Frog Lover with Foot On Ice Cube Propaganda Poster T-Shirt">
+    <section class="product-section card" id="p3" data-title="Resisting Frog Lover with Foot On Ice Cube Propaganda Poster T-Shirt">
       <div class="product-media">
         <div class="badge">📣 Propaganda Parody</div>
-        <img src="assets/product-3.jpg" alt="Resisting Frog Lover with Foot On Ice Cube Propaganda Poster T-Shirt" width="800" height="533" loading="lazy" />
+        <img src="assets/product-3.png" alt="Resisting Frog Lover with Foot On Ice Cube Propaganda Poster T-Shirt" loading="lazy" />
       </div>
       <div class="product-copy">
-        <h3>Editor’s Pick #3: <span class="product-name">Resisting Frog Lover with Foot On Ice Cube Propaganda Poster T-Shirt</span></h3>
+        <h3>Editor’s Pick #3: <span class="product-name">Resisting Frog Lover with Foot On Ice Cube – Propaganda Poster Tee</span></h3>
         <p class="dek">A tongue-in-cheek “resistance” poster reimagined with a triumphant frog and an ice cube.</p>
         <ul class="pros">
           <li><strong>Why it’s great:</strong> bold graphic feels like a vintage poster reprint—but ridiculous in the best way.</li>
@@ -136,28 +200,28 @@
     </section>
 
     <!-- PRODUCT 4 -->
-    <section class="product-section card" data-title="Blow Up Frog Costume – Adult Inflatable Full-Body Suit">
+    <section class="product-section card" id="p4" data-title="Blow Up Frog Costume Adult Funny Inflatable Animal Costume">
       <div class="product-media">
         <div class="badge">🎉 Party Mode</div>
-        <img src="assets/product-4.jpg" alt="Blow Up Frog Costume for Adults – full body inflatable suit with air pump" width="800" height="533" loading="lazy" />
+        <img src="assets/product-4.png" alt="Blow Up Frog Costume Adult Funny Inflatable Animal Costume" loading="lazy" />
       </div>
       <div class="product-copy">
-        <h3>Editor’s Pick #4: <span class="product-name">Blow Up Frog Costume – Adult Funny Inflatable Costume</span></h3>
+        <h3>Editor’s Pick #4: <span class="product-name">Blow Up Frog Costume – Full-Body Inflatable</span></h3>
         <p class="dek">Zero to viral in 10 seconds. This full-body frog suit comes with an air pump for instant puff.</p>
         <ul class="pros">
           <li><strong>Why it’s great:</strong> huge silhouette = huge laughs; perfect for Halloween, parties, and live streams.</li>
           <li><strong>Best for:</strong> pranksters, party hosts, and creators chasing visual gags that play on camera.</li>
-          <li><strong>Tip:</strong> keep spare batteries for the blower; do a quick “air-seal check” before heading out.</li>
+          <li><strong>Tip:</strong> keep spare batteries for the blower; do a quick air-seal check before heading out.</li>
         </ul>
         <a class="cta" href="https://amzn.to/4o1EiKH" target="_blank" rel="nofollow sponsored noopener">See it on Amazon</a>
       </div>
     </section>
 
     <!-- PRODUCT 5 -->
-    <section class="product-section card" data-title="Inflatable Dinosaur Costume – Adult T-Rex Blow-Up">
+    <section class="product-section card" id="p5" data-title="Inflatable Dinosaur Costume for Adult Halloween Dinosaur Costumes Blow up T rex Costume for Adults">
       <div class="product-media">
         <div class="badge">🦖 Crowd Favorite</div>
-        <img src="assets/product-5.jpg" alt="Inflatable Dinosaur Costume for Adults – T-Rex blow up costume" width="800" height="533" loading="lazy" />
+        <img src="assets/product-5.png" alt="Inflatable Dinosaur Costume for Adult Halloween T-Rex" loading="lazy" />
       </div>
       <div class="product-copy">
         <h3>Editor’s Pick #5: <span class="product-name">Inflatable Dinosaur Costume – Adult T-Rex</span></h3>
@@ -171,7 +235,7 @@
       </div>
     </section>
 
-    <!-- GUIDANCE -->
+    <!-- BUYING GUIDE -->
     <section id="how-to-choose" class="guide card">
       <h2>How to Choose the Right Pick</h2>
       <div class="grid-2">
@@ -213,11 +277,15 @@
   <footer class="site-footer">
     <div class="wrapper">
       <p class="legal"><strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. All product names, logos, and brands are property of their respective owners.</p>
-      <p class="links"><a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a></p>
+      <p class="links">
+        <a href="https://chattokgaming.com/policy/terms" target="_blank" rel="noopener">Terms</a> •
+        <a href="https://chattokgaming.com/policy/privacy" target="_blank" rel="noopener">Privacy</a>
+      </p>
       <p class="copyright">© 2025 Gift Guide Collective. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Optional: small script to auto-build a simple TOC if needed -->
   <script src="script.js" defer></script>
 </body>
 </html>
