@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Gift Guide – Responsive Base Styles
+   Gift Guide – Responsive Styles (10% side gutters)
    Brand: #ff0050 (hot pink), #00f2ea (cyan), #000000 (black)
    ========================================================================== */
 
@@ -11,7 +11,7 @@
   --muted:#b8c4d6;
   --brand1:#ff0050;
   --brand2:#00f2ea;
-  --ring:rgba(255,0,80,.25);
+  --ring:rgba(0,242,234,.25);
   --border:#1c1f27;
   --shadow:0 10px 30px rgba(0,0,0,.25);
   --radius:16px;
@@ -32,7 +32,7 @@ body{
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 img{ max-width:100%; height:auto; border-radius:var(--radius) }
-a{ color:var(--brand2) }
+a{ color:var(--brand2); text-decoration:none }
 a:hover{ color:#fff }
 h1,h2,h3{ line-height:1.22; margin:0 0 .5em }
 h1{ font-size:var(--fs-xl); font-weight:900 }
@@ -41,15 +41,12 @@ h3{ font-size:1.1rem; font-weight:800 }
 p{ margin:.6em 0 }
 ul{ margin:.6em 0 .6em 1.1em }
 
-/* 10% gutters left/right on every section that uses .wrapper */
+/* --- Layout container & gutters (10% per side) --- */
 .wrapper{
   width:100%;
   margin:0 auto;
-  padding-left:10vw;   /* 10% of the viewport on the left  */
-  padding-right:10vw;  /* 10% of the viewport on the right */
-}
-@media (max-width: 480px){
-  .wrapper{ padding-left:6vw; padding-right:6vw; } /* keeps it comfy on tiny phones */
+  padding-left:10vw;
+  padding-right:10vw;
 }
 .content{ padding: 28px 0 72px }
 
@@ -74,16 +71,19 @@ ul{ margin:.6em 0 .6em 1.1em }
   display:flex; align-items:center; justify-content:space-between; height:64px;
 }
 .brand{
-  font-weight:900; letter-spacing:.2px; color:var(--ink); text-decoration:none;
+  font-weight:900; letter-spacing:.2px; color:var(--ink);
 }
+
+/* keep nav from wrapping awkwardly on small widths */
 .top-nav a{
-  color:var(--muted); text-decoration:none; margin-left:18px; font-size:var(--fs-sm);
+  color:var(--muted); margin-left:18px; font-size:var(--fs-sm);
 }
 .top-nav a:hover{ color:var(--ink) }
 
 /* --- Hero --- */
 .hero{
-  display:grid; grid-template-columns: 1.15fr .85fr; gap: clamp(16px, 2.5vw, 28px);
+  display:grid; grid-template-columns: 1.15fr .85fr;
+  gap: clamp(16px, 2.5vw, 28px);
   align-items:center;
 }
 .hero .brand-mark{
@@ -101,7 +101,7 @@ ul{ margin:.6em 0 .6em 1.1em }
 .hero .cta.primary{
   display:inline-block;
   background:linear-gradient(90deg, var(--brand1), var(--brand2));
-  color:#000; font-weight:900; text-decoration:none;
+  color:#000; font-weight:900;
   border:none; padding: 12px 18px; border-radius:14px; margin-top:10px;
   box-shadow: 0 10px 22px rgba(0,0,0,.25);
 }
@@ -116,7 +116,7 @@ ul{ margin:.6em 0 .6em 1.1em }
 }
 .thumb-grid a{
   display:flex; flex-direction:column; align-items:center;
-  text-decoration:none; background:var(--panel);
+  background:var(--panel);
   border:1px solid var(--border);
   border-radius:14px; padding:10px;
   box-shadow: 0 6px 16px rgba(0,0,0,.15);
@@ -143,11 +143,12 @@ ul{ margin:.6em 0 .6em 1.1em }
 .product-section .product-copy h3{ margin-top:0 }
 .product-section .dek{ color:var(--muted) }
 .pros{ color:var(--muted); padding-left: 1.1em }
+
 .cta{
   display:inline-block;
   border:2px solid var(--brand2);
   padding:10px 14px; border-radius:12px;
-  text-decoration:none; color:var(--ink); font-weight:800;
+  color:var(--ink); font-weight:800;
   transition:.2s; box-shadow:none;
 }
 .cta:hover{
@@ -185,19 +186,23 @@ ul{ margin:.6em 0 .6em 1.1em }
 
 /* --- Responsive adjustments --- */
 @media (max-width: 1024px){
-  .wrapper{ width:min(100%, 920px) }
+  /* keep 10% gutters; nothing special needed here */
 }
 @media (max-width: 900px){
   .hero, .product-section{ grid-template-columns: 1fr }
   .grid-2{ grid-template-columns: 1fr }
+  .site-header .wrapper{ height:60px }
   .top-nav a{ margin-left:12px }
 }
 @media (max-width: 600px){
-  .site-header .wrapper{ height:56px }
   .thumb{ width:140px; height:140px }
   .card{ padding: 16px }
   .content{ padding: 20px 0 56px }
   h1{ font-size: clamp(1.45rem, 1.2rem + 2.4vw, 1.9rem) }
+}
+/* Slightly reduce gutters on very small phones for comfort */
+@media (max-width: 480px){
+  .wrapper{ padding-left:6vw; padding-right:6vw; }
 }
 
 /* --- Optional: light mode if you ever add a toggle --- */
