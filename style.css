@@ -41,11 +41,15 @@ h3{ font-size:1.1rem; font-weight:800 }
 p{ margin:.6em 0 }
 ul{ margin:.6em 0 .6em 1.1em }
 
-/* --- Layout container & gutters --- */
+/* 10% gutters left/right on every section that uses .wrapper */
 .wrapper{
-  width:min(100%, 980px);
+  width:100%;
   margin:0 auto;
-  padding-inline: clamp(14px, 3vw, 24px);
+  padding-left:10vw;   /* 10% of the viewport on the left  */
+  padding-right:10vw;  /* 10% of the viewport on the right */
+}
+@media (max-width: 480px){
+  .wrapper{ padding-left:6vw; padding-right:6vw; } /* keeps it comfy on tiny phones */
 }
 .content{ padding: 28px 0 72px }
 
