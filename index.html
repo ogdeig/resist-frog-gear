@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{TOPIC} – Amazon Gift Guide</title>
+  <meta name="description" content="{META_DESCRIPTION}" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="{TOPIC} – Amazon Gift Guide" />
+  <meta property="og:description" content="{OG_DESCRIPTION}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="assets/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{TOPIC} – Amazon Gift Guide" />
+  <meta name="twitter:description" content="{OG_DESCRIPTION}" />
+  <meta name="twitter:image" content="assets/hero.jpg" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"{TOPIC}",
+    "description":"{META_DESCRIPTION}",
+    "author":{"@type":"Person","name":"Gift Guide Editors"},
+    "publisher":{"@type":"Organization","name":"Gift Guide Collective","logo":{"@type":"ImageObject","url":"https://example.com/logo.png"}},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://example.com/{SLUG}/"},
+    "datePublished":"2025-10-22",
+    "dateModified":"2025-10-22"
+  }
+  </script>
+  <script id="itemlist-jsonld" type="application/ld+json">{}</script>
+  <script id="faq-jsonld" type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Are these Amazon links affiliate links?","acceptedAnswer":{"@type":"Answer","text":"Yes. As an Amazon Associate I earn from qualifying purchases at no extra cost to you."}},
+      {"@type":"Question","name":"Do you list prices?","acceptedAnswer":{"@type":"Answer","text":"Amazon prices and availability change often. Click through to see the current price and delivery window for your location."}},
+      {"@type":"Question","name":"Who operates this site?","acceptedAnswer":{"@type":"Answer","text":"This guide is independent and not affiliated with any other brand. All trademarks belong to their owners."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrapper">
+      <a class="brand" href="#top" aria-label="Home">Gift Guide</a>
+      <nav class="top-nav">
+        <a href="#top-picks">Top Picks</a>
+        <a href="#how-to-choose">How to Choose</a>
+        <a href="#faqs">FAQs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="content">
+    <section class="hero card">
+      <div class="hero-copy">
+        <h1>{TOPIC}</h1>
+        <p class="lead">{INTRO}</p>
+        <p class="disclosure"><strong>Disclosure:</strong> This article contains affiliate links. <em>As an Amazon Associate I earn from qualifying purchases.</em> It doesn’t change the price you pay.</p>
+        <p class="note">This guide is independent and <strong>not affiliated</strong> with any other brand.</p>
+        <a class="cta primary" href="#top-picks">Jump to Top Picks ↓</a>
+      </div>
+      <div class="hero-media">
+        <img src="assets/hero.jpg" alt="{TOPIC} – hero image" width="1200" height="630" />
+      </div>
+    </section>
+
+    <section id="top-picks" class="toc card">
+      <h2>Quick Navigation</h2>
+      <ol class="toc-list" id="toc-list"></ol>
+    </section>
+
+    <!-- PRODUCT TEMPLATE (duplicate & increment) -->
+    <section class="product-section card" data-title="{P1_TITLE}">
+      <div class="product-media">
+        <div class="badge">{P1_ARCHETYPE_BADGE}</div>
+        <img src="assets/product-1.jpg" alt="{P1_TITLE}" width="800" height="533" loading="lazy" />
+      </div>
+      <div class="product-copy">
+        <h3>Editor’s Pick #1: <span class="product-name">{P1_TITLE}</span></h3>
+        <p class="dek">{P1_DEK}</p>
+        <ul class="pros">
+          <li><strong>Why it’s great:</strong> {P1_BENEFIT_1}</li>
+          <li><strong>Best for:</strong> {P1_BENEFIT_2}</li>
+          <li><strong>Tip:</strong> {P1_TIP}</li>
+        </ul>
+        <a class="cta" href="{P1_AFFILIATE_URL}" target="_blank" rel="nofollow sponsored noopener">See it on Amazon</a>
+      </div>
+    </section>
+
+    <section id="how-to-choose" class="guide card">
+      <h2>How to Choose the Right Pick</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Think in “Daily Upgrades”</h3>
+          <p>Upgrade what they already love—tools, kitchen, outdoor, coffee, gadgets. Quality over quantity always wins.</p>
+        </div>
+        <div>
+          <h3>Match Their Archetype</h3>
+          <ul class="pros archetype-list">
+            <li><span>🔥 Grill Master / Foodie</span></li>
+            <li><span>🛠️ DIY Tinkerer</span></li>
+            <li><span>🔌 Tech Enthusiast</span></li>
+            <li><span>⛰️ Outdoors</span></li>
+            <li><span>☕ Coffee Lover</span></li>
+            <li><span>🗂️ Organized Minimalist</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faqs" class="faq card">
+      <h2>FAQs</h2>
+      <details>
+        <summary>Are these Amazon links affiliate links?</summary>
+        <p>Yes. As an Amazon Associate I earn from qualifying purchases. That helps support new guides — at no cost to you.</p>
+      </details>
+      <details>
+        <summary>Do you list prices?</summary>
+        <p>Amazon prices and availability change often. Click through to see the current price and delivery window for your location.</p>
+      </details>
+      <details>
+        <summary>Who operates this site?</summary>
+        <p>This guide is independent and not affiliated with any other brand. All trademarks belong to their owners.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p class="legal"><strong>Affiliate Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. All product names, logos, and brands are property of their respective owners.</p>
+      <p class="links"><a href="terms.html">Terms</a> • <a href="privacy.html">Privacy</a></p>
+      <p class="copyright">© 2025 Gift Guide Collective. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
